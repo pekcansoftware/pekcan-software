@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanım Şartları (Terms of Service) | Pekcan Software</title>
+    <meta name="description" content="Pekcan Software mobil uygulamaları için Kullanım Şartları. Türkçe ve İngilizce.">
+    <meta name="theme-color" content="#0b0f19">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Ctext x='32' y='45' font-family='Segoe UI,Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --accent: #6366f1;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding-bottom: 60px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            background: rgba(11, 15, 25, 0.85);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .logo-badge {
+            width: 32px;
+            height: 32px;
+            background: var(--accent-gradient);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 50px auto 0;
+            padding: 0 24px;
+        }
+
+        .privacy-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .meta-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 28px 0 12px;
+            color: #c7d2fe;
+        }
+
+        p, ul {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 22px 0 8px;
+        }
+
+        .lang-note {
+            margin: 0 0 28px;
+            padding: 14px 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: rgba(99, 102, 241, 0.07);
+            font-size: 0.9rem;
+        }
+
+        .lang-divider {
+            margin: 48px 0 8px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .no-collect li::marker {
+            color: #34d399;
+        }
+
+        .contact-highlight {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+        }
+
+        .contact-highlight p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .privacy-box {
+                padding: 24px;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 28px 20px 48px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        .footer-note a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-content">
+        <a href="index.html" class="logo">
+            <div class="logo-badge">P</div>
+            <span>Pekcan Software</span>
+        </a>
+        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    </div>
+</nav>
+
+<div class="content-container">
+    <div class="privacy-box">
+        <h1>Kullanım Şartları (Terms of Service)</h1>
+        <div class="meta-date">Son Güncelleme: 5 Eylül 2026</div>
+
+        <div class="lang-note">
+            🇬🇧 <strong>English version below.</strong> The complete English text of these Terms is available in the <a href="#english" style="color:#818cf8;">English section</a> at the bottom of this page.
+        </div>
+
+        <h2>1. Kabul</h2>
+        <p>Pekcan Software tarafından geliştirilen bir uygulamayı indirip kullanarak bu Kullanım Şartları'nı kabul etmiş olursunuz. Şartları kabul etmiyorsanız lütfen uygulamayı kullanmayın ve cihazınızdan kaldırın.</p>
+
+        <h2>2. Hizmetin Tanımı</h2>
+        <p>Uygulamalarımız, günlük hayatı kolaylaştırmayı amaçlayan kişisel kullanıma yönelik yardımcı araçlardır. Kullanıcı hesabı gerektirmez ve büyük bölümü internet bağlantısı olmadan çalışır. Uygulamaların hangi veriyi nasıl işlediği <a href="privacy.html" style="color:#818cf8;">Gizlilik Politikamızda</a> ayrıntılı olarak açıklanmıştır.</p>
+
+        <h2>3. Kullanım Hakkı</h2>
+        <p>Size, uygulamalarımızı kişisel ve ticari olmayan amaçlarla kullanmanız için devredilemez ve münhasır olmayan bir lisans veriyoruz. Bu lisans; uygulamayı kopyalayıp dağıtma, satma, kiralama, kaynak koduna dönüştürme (tersine mühendislik) veya türev çalışma üretme hakkını içermez.</p>
+
+        <h2>4. Kullanıcı Yükümlülükleri</h2>
+        <ul>
+            <li>Uygulamaları yürürlükteki mevzuata aykırı biçimde kullanmamayı,</li>
+            <li>Hizmetin işleyişini bozacak, aşırı yük bindirecek veya güvenlik önlemlerini aşmaya yönelik girişimlerde bulunmamayı,</li>
+            <li>Napsak? uygulamasının Uzak Mesafe Odası özelliğinde başkalarını rahatsız edici, hukuka aykırı veya zarar verici içerik paylaşmamayı</li>
+        </ul>
+        <p>kabul edersiniz.</p>
+
+        <h2>5. Sağlık ve Finans İçerikli Uygulamalar Hakkında Önemli Uyarı</h2>
+        <p><strong>Şifa Takip</strong> bir ilaç saati hatırlatıcısıdır. Tıbbi bir cihaz değildir; teşhis koymaz, tedavi önermez ve doktorunuzun ya da eczacınızın talimatlarının yerine geçmez. İlaçlarınızla ilgili kararları daima sağlık profesyonelinize danışarak alın. Bildirimler cihazınızın işletim sistemi tarafından gösterilir; telefonun kapalı olması, pil tasarrufu kısıtlamaları veya bildirim izninin kapatılması gibi nedenlerle bir hatırlatma gecikebilir veya hiç görünmeyebilir. Hayati önem taşıyan ilaç takibinde tek başına bu uygulamaya güvenmeyin.</p>
+        <p><strong>İçini Dök</strong> bir rahatlama aracıdır. Psikolojik danışmanlık, terapi veya tıbbi tedavi yerine geçmez. Ruhsal açıdan zor bir dönemden geçiyorsanız bir uzmana başvurmanızı öneririz. Acil bir durumdaysanız lütfen 112'yi arayın.</p>
+        <p><strong>Cebimdeki Delik</strong> kendi girdiğiniz kayıtlar üzerinden hesaplama yapan bir bütçe aracıdır. Yatırım danışmanlığı, finansal danışmanlık veya muhasebe hizmeti sunmaz; ürettiği rakamlar bilgilendirme amaçlıdır.</p>
+
+        <h2>6. Fikri Mülkiyet</h2>
+        <p>Uygulamaların kaynak kodu, arayüz tasarımı, metinleri, logoları ve görselleri Pekcan Software'e aittir ve telif hakkı mevzuatı ile korunmaktadır. Uygulama içinde sizin oluşturduğunuz içerik (notlar, kayıtlar, listeler) size aittir; bu içerik zaten yalnızca sizin cihazınızda tutulur ve bizim erişimimiz yoktur.</p>
+
+        <h2>7. Garanti Reddi</h2>
+        <p>Uygulamalar "olduğu gibi" ve "mevcut haliyle" sunulur. Kesintisiz, hatasız veya belirli bir amaca uygun çalışacaklarına dair açık ya da zımni bir garanti verilmez. Uygulamalar geliştirme aşamasındadır ve özellikler önceden bildirilmeksizin değişebilir.</p>
+
+        <h2>8. Sorumluluğun Sınırlandırılması</h2>
+        <p>Yürürlükteki mevzuatın izin verdiği azami ölçüde, uygulamaların kullanımından veya kullanılamamasından doğabilecek dolaylı zararlardan, veri kaybından ya da kâr kaybından sorumlu değiliz. Verileriniz yalnızca cihazınızda saklandığı için, cihazın kaybolması, arızalanması, sıfırlanması veya uygulamanın kaldırılması durumunda veriler geri getirilemez. Önemli kayıtlarınızın ayrıca yedeğini almanızı öneririz.</p>
+
+        <h2>9. Ücretlendirme</h2>
+        <p>Uygulamalarımız şu anda ücretsizdir ve reklam içermez. İleride ücretli bir özellik sunulması halinde, satın alma öncesinde açıkça belirtilir ve ödeme işlemi Google Play üzerinden gerçekleşir. İade talepleri Google Play'in iade politikasına tabidir.</p>
+
+        <h2>10. Şartlardaki Değişiklikler</h2>
+        <p>Bu şartları zaman zaman güncelleyebiliriz. Güncel metin her zaman bu sayfada, üstteki tarihle birlikte yayınlanır. Değişiklikten sonra uygulamayı kullanmaya devam etmeniz yeni şartları kabul ettiğiniz anlamına gelir.</p>
+
+        <h2>11. Uygulanacak Hukuk</h2>
+        <p>Bu şartlar Türkiye Cumhuriyeti hukukuna tabidir. Uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri ve icra daireleri yetkilidir. Tüketici sıfatıyla sahip olduğunuz yasal haklar saklıdır.</p>
+
+        <h2>12. İletişim</h2>
+        <div class="contact-highlight">
+            <p><strong>Geliştirici:</strong> Pekcan Software (bağımsız yazılım geliştiricisi, Türkiye)</p>
+            <p><strong>E-posta:</strong> <a href="mailto:support.pekcansoftware@gmail.com" style="color:#818cf8; text-decoration:none;">support.pekcansoftware@gmail.com</a></p>
+            <p><strong>Web sitesi:</strong> <a href="https://pekcansoftware.github.io/pekcan-software/" style="color:#818cf8; text-decoration:none;">pekcansoftware.github.io/pekcan-software</a></p>
+        </div>
+
+        <div class="lang-divider" id="english">
+            <h1>Terms of Service (English)</h1>
+            <div class="meta-date">Last updated: 5 September 2026</div>
+        </div>
+
+        <h2>1. Acceptance</h2>
+        <p>By downloading and using an application developed by Pekcan Software, you accept these Terms of Service. If you do not accept them, please do not use the application and remove it from your device.</p>
+
+        <h2>2. Description of the service</h2>
+        <p>Our applications are personal-use utilities intended to make everyday life easier. They require no user account and most of them work without an internet connection. What data each application handles is described in detail in our <a href="privacy.html" style="color:#818cf8;">Privacy Policy</a>.</p>
+
+        <h2>3. Licence</h2>
+        <p>We grant you a non-exclusive, non-transferable licence to use our applications for personal, non-commercial purposes. This licence does not include the right to copy and distribute, sell, rent, reverse engineer, or create derivative works from the applications.</p>
+
+        <h2>4. Your obligations</h2>
+        <p>You agree not to use the applications in breach of applicable law, not to attempt to disrupt or overload the service or circumvent its security measures, and not to share unlawful, harmful or harassing content through the Remote Room feature of Napsak?.</p>
+
+        <h2>5. Important notice regarding health and finance related applications</h2>
+        <p><strong>Şifa Takip</strong> is a medication reminder. It is not a medical device: it does not diagnose, does not recommend treatment, and does not replace the instructions of your doctor or pharmacist. Always consult a healthcare professional about decisions concerning your medication. Reminders are displayed by your device's operating system, and a reminder may be delayed or may not appear at all if the phone is switched off, battery optimisation restrictions apply, or the notification permission is revoked. Do not rely on this application alone for life-critical medication.</p>
+        <p><strong>İçini Dök</strong> is a decompression tool. It does not replace counselling, therapy or medical treatment. If you are going through a mentally difficult period, we encourage you to consult a professional. In an emergency, please call your local emergency number (112 in Türkiye).</p>
+        <p><strong>Cebimdeki Delik</strong> is a budgeting tool that calculates using the records you enter yourself. It provides no investment advice, financial advice or accounting service; the figures it produces are informational only.</p>
+
+        <h2>6. Intellectual property</h2>
+        <p>The source code, interface design, texts, logos and imagery of the applications belong to Pekcan Software and are protected by copyright law. Content you create inside an application (notes, records, lists) belongs to you; that content is stored on your device only and we have no access to it.</p>
+
+        <h2>7. Disclaimer of warranties</h2>
+        <p>The applications are provided "as is" and "as available". No express or implied warranty is given that they will operate uninterrupted, error-free or fit for a particular purpose. The applications are under development and features may change without prior notice.</p>
+
+        <h2>8. Limitation of liability</h2>
+        <p>To the maximum extent permitted by applicable law, we are not liable for indirect damages, data loss or loss of profit arising from the use of, or inability to use, the applications. Because your data is stored on your device only, it cannot be recovered if the device is lost, fails, is reset, or the application is uninstalled. We recommend keeping separate backups of important records.</p>
+
+        <h2>9. Pricing</h2>
+        <p>Our applications are currently free of charge and contain no advertising. If a paid feature is offered in the future, it will be clearly stated before purchase and the transaction will be handled through Google Play. Refund requests are subject to Google Play's refund policy.</p>
+
+        <h2>10. Changes to these terms</h2>
+        <p>We may update these terms from time to time. The current text is always published on this page together with the date shown above. Continuing to use the application after a change means you accept the new terms.</p>
+
+        <h2>11. Governing law</h2>
+        <p>These terms are governed by the laws of the Republic of Türkiye, and the courts of the Republic of Türkiye have jurisdiction over disputes. Your statutory rights as a consumer are reserved.</p>
+
+        <h2>12. Contact</h2>
+        <div class="contact-highlight">
+            <p><strong>Developer:</strong> Pekcan Software (independent software developer, Türkiye)</p>
+            <p><strong>E-mail:</strong> <a href="mailto:support.pekcansoftware@gmail.com" style="color:#818cf8; text-decoration:none;">support.pekcansoftware@gmail.com</a></p>
+            <p><strong>Website:</strong> <a href="https://pekcansoftware.github.io/pekcan-software/" style="color:#818cf8; text-decoration:none;">pekcansoftware.github.io/pekcan-software</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        <p>&copy; 2026 Pekcan Software &mdash; <a href="index.html" style="color:#818cf8;">Ana Sayfa</a> &bull; <a href="privacy.html" style="color:#818cf8;">Gizlilik Politikası</a></p>
+    </div>
+</div>
+
+</body>
+</html>

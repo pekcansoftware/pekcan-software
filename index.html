@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pekcan Software | Mobil Uygulama ve Yazılım Geliştirme</title>
-    <meta name="description" content="Pekcan Software - Google Play için kullanıcı odaklı, gizliliğe saygılı mobil uygulamalar geliştiren bağımsız bir yazılım girişimi.">
+    <meta name="description" content="Pekcan Software - hesap gerektirmeyen, reklamsız ve çoğunlukla çevrimdışı çalışan Android uygulamaları geliştiren bağımsız bir yazılım girişimi.">
     <meta name="theme-color" content="#0b0f19">
     <link rel="canonical" href="https://pekcansoftware.github.io/pekcan-software/">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Ctext x='32' y='45' font-family='Segoe UI,Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
@@ -346,6 +346,70 @@
             text-transform: uppercase;
         }
 
+        .app-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 99px;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .tag-good {
+            border-color: rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.08);
+        }
+
+        .trust {
+            padding: 20px 0 40px;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .trust-item {
+            padding: 22px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+        }
+
+        .trust-item h4 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .trust-item p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+        }
+
+        .en-block {
+            margin-top: 32px;
+            padding: 22px 26px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            background: rgba(99, 102, 241, 0.06);
+            font-size: 0.93rem;
+            color: var(--text-secondary);
+            text-align: left;
+        }
+
+        .en-block strong {
+            color: var(--text-primary);
+        }
+
         .disclaimer {
             margin-top: 28px;
             padding: 20px 24px;
@@ -448,7 +512,8 @@
             <div class="nav-links">
                 <a href="#about">Hakkımızda</a>
                 <a href="#apps">Uygulamalar</a>
-                <a href="privacy.html">Gizlilik Politikası</a>
+                <a href="privacy.html">Gizlilik</a>
+                <a href="terms.html">Kullanım Şartları</a>
                 <a href="#contact" class="nav-btn">İletişim</a>
             </div>
         </div>
@@ -458,70 +523,141 @@
     <section class="hero">
         <div class="container">
             <div class="tagline-pill">
-                <span>⚡</span> Android & Mobil Çözümler
+                <span>⚡</span> Android &amp; Mobil Çözümler
             </div>
-            <h1>Yenilikçi ve Güvenli<br><span>Mobil Deneyimler</span></h1>
-            <p>Pekcan Software, kullanıcı odaklı modern mobil araçlar ve bilgi uygulamaları geliştiren bağımsız bir yazılım girişimidir.</p>
+            <h1>Çevrimdışı Çalışan<br><span>Sade Mobil Araçlar</span></h1>
+            <p>Pekcan Software, günlük hayatı kolaylaştıran küçük ve odaklı Android uygulamaları geliştiren bağımsız bir yazılım girişimidir. Uygulamalarımız hesap açmanızı istemez, reklam göstermez ve mümkün olan her yerde verinizi cihazınızdan çıkarmaz.</p>
             <div class="hero-actions">
                 <a href="#apps" class="btn-primary">Projeleri İncele</a>
-                <a href="privacy.html" class="btn-secondary">Gizlilik & Güvenlik</a>
+                <a href="privacy.html" class="btn-secondary">Gizlilik &amp; Güvenlik</a>
             </div>
         </div>
     </section>
 
-    <!-- Özellikler / Değerler -->
+    <!-- Değerler -->
     <section class="features" id="about">
         <div class="container">
             <div class="grid">
                 <div class="card">
-                    <div class="card-icon">🚀</div>
-                    <h3>Yüksek Performans</h3>
-                    <p>Hafif, optimize edilmiş ve pil tüketimini minimumda tutan akıcı Android deneyimleri geliştiriyoruz.</p>
+                    <div class="card-icon">📴</div>
+                    <h3>Çevrimdışı Öncelikli</h3>
+                    <p>Uygulamalarımızın büyük bölümü internet bağlantısı olmadan çalışır. Kaydettikleriniz telefonunuzun kendi hafızasında kalır, sunucularımıza kopyalanmaz.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Gizlilik ve Güvenlik</h3>
-                    <p>Kullanıcı verilerinin güvenliği önceliğimizdir. Google Play standartlarına ve veri koruma ilkelerine sıkı sıkıya bağlıyız.</p>
+                    <div class="card-icon">🚫</div>
+                    <h3>Reklamsız ve İzlemesiz</h3>
+                    <p>Uygulamalarımızda reklam ağı ya da üçüncü taraf analitik izleyicisi bulunmaz. Davranışınız profillenmez, verileriniz satılmaz.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">✨</div>
-                    <h3>Modern ve Sade Tasarım</h3>
-                    <p>Karmaşıklıktan uzak, herkesin rahatlıkla kullanabileceği estetik ve kullanıcı dostu arayüzler sunuyoruz.</p>
+                    <div class="card-icon">🔓</div>
+                    <h3>Hesap Gerektirmez</h3>
+                    <p>Kayıt olmanız gerekmez. E-posta, telefon numarası veya şifre istemeyiz; kimliğinizi bilmeden çalışan uygulamalar tasarlıyoruz.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Uygulamalar / Vitrin -->
+    <!-- Uygulamalar -->
     <section class="showcase" id="apps">
         <div class="container">
             <div class="section-header">
                 <h2>Uygulamalarımız &amp; Projeler</h2>
-                <p>Google Play Store için hazırlamakta olduğumuz güncel mobil projelerimiz</p>
+                <p>Geliştirme sürecindeki projelerimiz. Henüz Google Play Store'da yayında olan bir uygulamamız bulunmuyor; her biri testlerini tamamladıkça bu sayfada duyurulacaktır.</p>
             </div>
 
             <div class="app-card">
-                <div class="app-icon">🔎</div>
+                <div class="app-icon">🎲</div>
                 <div class="app-info">
                     <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>ChainScout — Kripto Piyasa Takip Uygulaması</h4>
-                    <p>Kripto para piyasalarındaki fiyat ve hacim hareketlerini derleyip sade, okunabilir bir arayüzde sunan <strong>bilgi amaçlı</strong> bir takip uygulaması. Yatırım tavsiyesi vermez, alım satım işlemi gerçekleştirmez, cüzdan veya borsa hesabınıza bağlanmaz ve sizin adınıza hiçbir finansal karar almaz.</p>
+                    <h4>Napsak?</h4>
+                    <p>Çiftler ve arkadaşlar için karar verme uygulaması. "Bugün ne yapsak, nereye gitsek, ne izlesek?" tartışmasını bitirir: iki taraf da kart destesindeki seçenekleri kendi telefonunda işaretler, ortak beğeni çıktığında eşleşme oluşur. Uzak Mesafe odası sayesinde farklı şehirlerdeki iki kişi de bir oda koduyla aynı anda karar verebilir.</p>
+                    <div class="app-meta">
+                        <span class="tag">Android</span>
+                        <span class="tag tag-good">Hesap gerektirmez</span>
+                        <span class="tag tag-good">Reklamsız</span>
+                        <span class="tag">Uzak oda için internet</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="disclaimer">
-                <strong>Önemli uyarı:</strong> Bu sayfada tanıtılan uygulamalar yalnızca bilgilendirme amaçlıdır. Sunulan hiçbir içerik yatırım danışmanlığı, alım satım tavsiyesi veya finansal yönlendirme niteliği taşımaz. Kripto para piyasaları yüksek oynaklık içerir ve anaparanızın tamamını kaybetme riski bulunur. Yatırım kararlarınız tamamen kendi sorumluluğunuzdadır.
+            <div class="app-card">
+                <div class="app-icon">💸</div>
+                <div class="app-info">
+                    <span class="badge-soon">Geliştirme Aşamasında</span>
+                    <h4>Cebimdeki Delik</h4>
+                    <p>Unuttuğunuz abonelikleri ve fark etmeden biriken küçük düzenli harcamaları ortaya çıkaran sızıntı dedektifi. Aylık kaçağınızın yıllık karşılığını hesaplar, iptal ettiklerinizi "kapatılan delikler" olarak kaydeder. Banka hesabınıza bağlanmaz, kart bilgisi istemez — kayıtları siz girersiniz.</p>
+                    <div class="app-meta">
+                        <span class="tag">Android</span>
+                        <span class="tag tag-good">Tamamen çevrimdışı</span>
+                        <span class="tag tag-good">Hesap gerektirmez</span>
+                        <span class="tag tag-good">Reklamsız</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon">💊</div>
+                <div class="app-info">
+                    <span class="badge-soon">Geliştirme Aşamasında</span>
+                    <h4>Şifa Takip</h4>
+                    <p>Aile ilaç saati hatırlatıcısı. Anne, baba, eş ya da çocuk için ayrı ilaç kaydı tutar ve her doz saatinde bildirim gönderir. "Aldım" işareti her gece kendiliğinden sıfırlanır; kutu stoğu azalınca uyarır. Sağlık bilgileri hassastır — bu yüzden uygulama internet izni dahi istemez, hiçbir kayıt telefondan çıkmaz.</p>
+                    <div class="app-meta">
+                        <span class="tag">Android</span>
+                        <span class="tag tag-good">İnternet izni yok</span>
+                        <span class="tag tag-good">Veriler cihazda kalır</span>
+                        <span class="tag tag-good">Reklamsız</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon">🌬️</div>
+                <div class="app-info">
+                    <span class="badge-soon">Geliştirme Aşamasında</span>
+                    <h4>İçini Dök</h4>
+                    <p>Yoğun bir an geçirdiğinizde içinizi dökebileceğiniz sade bir alan ve eşlik eden nefes egzersizi. Yazdıklarınız yalnızca sizin telefonunuzda tutulur, hiçbir yere gönderilmez. Uygulama tıbbi tedavi veya terapi yerine geçmez; zor bir dönemden geçiyorsanız bir uzmana başvurmanızı öneririz.</p>
+                    <div class="app-meta">
+                        <span class="tag">Android</span>
+                        <span class="tag tag-good">Hiçbir izin istemez</span>
+                        <span class="tag tag-good">Tamamen çevrimdışı</span>
+                        <span class="tag tag-good">Reklamsız</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- İletişim ve Destek -->
+    <!-- Güven -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <h4>🔍 Şeffaf veri kullanımı</h4>
+                    <p>Hangi uygulamanın hangi veriye dokunduğunu tek tek listeledik. Ayrıntılar <a href="privacy.html" style="color:#818cf8;">gizlilik politikamızda</a>.</p>
+                </div>
+                <div class="trust-item">
+                    <h4>🗑️ Veri silme hakkı</h4>
+                    <p>Verilerinizin silinmesini istediğinizde tek bir e-posta yeterli. Talepler en geç 30 gün içinde sonuçlandırılır.</p>
+                </div>
+                <div class="trust-item">
+                    <h4>✉️ Gerçek bir destek adresi</h4>
+                    <p>Yazdığınız e-postayı geliştiricinin kendisi okur. Yanıt süremiz genellikle 3 iş günüdür.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-box">
                 <h2>Bize Ulaşın</h2>
-                <p>Uygulama önerileri, hata bildirimleri veya iş birlikleri için bizimle doğrudan iletişime geçebilirsiniz.</p>
+                <p>Uygulama önerileri, hata bildirimleri, gizlilik soruları veya veri silme talepleriniz için doğrudan yazabilirsiniz. Yanıt süremiz genellikle 3 iş günüdür.</p>
                 <a href="mailto:support.pekcansoftware@gmail.com" class="contact-email">support.pekcansoftware@gmail.com</a>
+
+                <div class="en-block">
+                    <strong>English —</strong> Pekcan Software is an independent mobile software developer based in Türkiye. Our Android applications require no user account, contain no advertising networks and no third-party analytics trackers, and keep user data on the device wherever technically possible. For support, privacy questions or data deletion requests, write to <a href="mailto:support.pekcansoftware@gmail.com" style="color:#818cf8;">support.pekcansoftware@gmail.com</a> — we reply within 3 business days. Our <a href="privacy.html" style="color:#818cf8;">Privacy Policy</a> and <a href="terms.html" style="color:#818cf8;">Terms of Service</a> are available in both Turkish and English.
+                </div>
             </div>
         </div>
     </section>
@@ -529,13 +665,15 @@
     <!-- Alt Bilgi -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Pekcan Software. Tüm hakları saklıdır.</p>
+            <p>&copy; 2026 Pekcan Software &mdash; bağımsız mobil yazılım geliştiricisi, Türkiye. Tüm hakları saklıdır.</p>
             <div class="footer-links">
                 <a href="index.html">Ana Sayfa</a>
-                <span>•</span>
+                <span>&bull;</span>
                 <a href="privacy.html">Gizlilik Politikası (Privacy Policy)</a>
-                <span>•</span>
-                <a href="#contact">Destek</a>
+                <span>&bull;</span>
+                <a href="terms.html">Kullanım Şartları (Terms of Service)</a>
+                <span>&bull;</span>
+                <a href="mailto:support.pekcansoftware@gmail.com">Destek</a>
             </div>
         </div>
     </footer>
