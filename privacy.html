@@ -253,19 +253,26 @@
         </ul>
 
         <h2>2. Uygulama Bazında Veri Kullanımı</h2>
-        <p>Her uygulamanın veriyle ilişkisi farklıdır. Aşağıdaki tablo, geliştirme sürecindeki uygulamalarımızın güncel durumunu gösterir:</p>
 
-        <h3>Şifa Takip — aile ilaç hatırlatıcısı</h3>
-        <p>İlaç isimleri, doz saatleri, kişi adları ve stok bilgileri <strong>yalnızca cihazınızda</strong> saklanır. Uygulama internet erişim izni dahi talep etmez; teknik olarak veri gönderemez. Hatırlatmalar telefonun kendi bildirim sistemiyle, cihaz üzerinde zamanlanır.</p>
+        <h3>Cihazdan çıkmayan uygulamalar</h3>
+        <p>Aşağıdaki uygulamalar internet erişim izni talep etmez; teknik olarak veri gönderemezler. Oluşturduğunuz bütün kayıtlar telefonunuzun kendi hafızasında tutulur:</p>
+        <ul>
+            <li><strong>Nereye Koydum?</strong> — eşya ve saklama yeri kayıtları, ödünç verdikleriniz</li>
+            <li><strong>SonGün</strong> — ürün ve son kullanma tarihi kayıtları</li>
+            <li><strong>Cebimdeki Delik</strong> — abonelik ve harcama kayıtları. Banka hesabınıza veya kartınıza bağlanmaz, finansal kurum bilgisi istemez.</li>
+            <li><strong>YanKapı</strong> — ortak eşya ve kimde olduğu bilgisi</li>
+            <li><strong>Şifa Takip</strong> — ilaç isimleri, doz saatleri, kişi adları, stok bilgisi</li>
+            <li><strong>Acil Durum Kasası</strong> — kan grubu, alerji ve ilaç bilgisi, acil durumda aranacak kişiler</li>
+            <li><strong>İçini Dök</strong> — yazdığınız metinler. Uygulama hiçbir Android izni talep etmez.</li>
+            <li><strong>Sessiz Kafa</strong> — odaklanma sayacı ayarlarınız</li>
+            <li><strong>Kolayca Anlat</strong> — terim kartları uygulamanın içinde gömülüdür; arama yaptığınızda hiçbir sorgu dışarı gönderilmez</li>
+        </ul>
 
-        <h3>Cebimdeki Delik — abonelik ve harcama takibi</h3>
-        <p>Girdiğiniz abonelik ve harcama kayıtları <strong>yalnızca cihazınızda</strong> saklanır. Uygulama internet erişim izni talep etmez, banka hesabınıza veya kartınıza bağlanmaz, finansal kurum bilgisi istemez.</p>
+        <h3>Hassas veri içeren iki uygulama hakkında</h3>
+        <p><strong>Şifa Takip</strong> ve <strong>Acil Durum Kasası</strong>, doğaları gereği sağlık bilgisi tutar (ilaçlar, kan grubu, alerjiler). Bu bilgiler tamamen sizin girdiğiniz verilerdir, yalnızca cihazınızda saklanır, tarafımızca görülemez ve hiçbir sunucuya gönderilmez. <strong>Acil Durum Kasası</strong> ve <strong>YanKapı</strong>'da başka kişilerin adı ve telefon numarası gibi bilgileri de kaydedebilirsiniz; bu kayıtlar da cihazınızdan çıkmaz. Üçüncü kişilerin bilgilerini kaydederken onların rızasını almak sizin sorumluluğunuzdadır.</p>
 
-        <h3>İçini Dök — rahatlama ve nefes egzersizi</h3>
-        <p>Yazdığınız metinler <strong>yalnızca cihazınızda</strong> saklanır. Uygulama hiçbir Android izni talep etmez ve internete bağlanmaz.</p>
-
-        <h3>Napsak? — karar verme ve eşleşme</h3>
-        <p>Uygulama normalde çevrimdışı çalışır. Yalnızca isteğe bağlı <strong>"Uzak Mesafe Odası"</strong> özelliğini kullandığınızda sunucumuzla iletişim kurulur. Bu durumda gönderilenler şunlarla sınırlıdır:</p>
+        <h3>İnternet kullanan tek uygulama: Napsak?</h3>
+        <p>Napsak? de normalde çevrimdışı çalışır. Yalnızca isteğe bağlı <strong>"Uzak Mesafe Odası"</strong> özelliğini kullandığınızda sunucumuzla iletişim kurulur. Bu durumda gönderilenler şunlarla sınırlıdır:</p>
         <ul>
             <li>Rastgele üretilen oda kodu</li>
             <li>Seçtiğiniz kategori ve kart destesinin adı</li>
@@ -351,17 +358,26 @@
         </ul>
 
         <h2>2. Per-application data use</h2>
-        <h3>Şifa Takip — family medication reminder</h3>
-        <p>Medication names, dose times, person names and stock information are stored <strong>on your device only</strong>. The application does not even request the internet permission, so it is technically unable to transmit data. Reminders are scheduled locally by the phone's own notification system.</p>
 
-        <h3>Cebimdeki Delik — subscription and spending tracker</h3>
-        <p>Subscription and spending records you enter are stored <strong>on your device only</strong>. The application does not request the internet permission, does not connect to your bank account or card, and never asks for financial institution credentials.</p>
+        <h3>Applications whose data never leaves the device</h3>
+        <p>The following applications do not request the internet permission and are therefore technically unable to transmit data. Every record you create is kept in your phone's own storage:</p>
+        <ul>
+            <li><strong>Nereye Koydum?</strong> — items and where they were stored, things you lent out</li>
+            <li><strong>SonGün</strong> — products and their expiry dates</li>
+            <li><strong>Cebimdeki Delik</strong> — subscription and spending records. It does not connect to your bank account or card and never asks for financial institution credentials.</li>
+            <li><strong>YanKapı</strong> — shared items and who currently holds them</li>
+            <li><strong>Şifa Takip</strong> — medication names, dose times, person names, stock information</li>
+            <li><strong>Acil Durum Kasası</strong> — blood group, allergy and medication information, emergency contacts</li>
+            <li><strong>İçini Dök</strong> — the text you write. The application requests no Android permissions at all.</li>
+            <li><strong>Sessiz Kafa</strong> — your focus timer settings</li>
+            <li><strong>Kolayca Anlat</strong> — the glossary is embedded in the application; no search query is ever sent anywhere</li>
+        </ul>
 
-        <h3>İçini Dök — decompression and breathing exercise</h3>
-        <p>Text you write is stored <strong>on your device only</strong>. The application requests no Android permissions at all and does not connect to the internet.</p>
+        <h3>A note on the two applications holding sensitive data</h3>
+        <p><strong>Şifa Takip</strong> and <strong>Acil Durum Kasası</strong> hold health information by their very nature (medications, blood group, allergies). This is data you enter yourself, stored on your device only; we cannot see it and it is never sent to any server. In <strong>Acil Durum Kasası</strong> and <strong>YanKapı</strong> you may also record other people's names and phone numbers; those records likewise never leave your device. Obtaining the consent of third parties before recording their details is your responsibility.</p>
 
-        <h3>Napsak? — decision making and matching</h3>
-        <p>The application normally works offline. Our server is contacted only when you choose to use the optional <strong>"Remote Room"</strong> feature. In that case, the data transmitted is limited to: a randomly generated room code, the name of the selected category and card deck, and your like / dislike answers to the cards.</p>
+        <h3>The only application that uses the internet: Napsak?</h3>
+        <p>Napsak? also works offline under normal use. Our server is contacted only when you choose to use the optional <strong>"Remote Room"</strong> feature. In that case, the data transmitted is limited to: a randomly generated room code, the name of the selected category and card deck, and your like / dislike answers to the cards.</p>
         <p>No name, e-mail address, phone number, location, contact list or device identifier is transmitted. Room records are held in volatile server memory only and are never written to disk or to a database. A room lives for 15 minutes by default, is extended by activity, and is deleted automatically after at most 2 hours. If the server restarts, all open rooms are lost.</p>
 
         <h2>3. Data we do not collect</h2>
