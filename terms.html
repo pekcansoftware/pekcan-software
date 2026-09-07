@@ -190,12 +190,54 @@
             font-size: 0.85rem;
         }
 
-        @media (max-width: 600px) {
-            .privacy-box {
-                padding: 24px;
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 0 16px;
             }
+
+            .privacy-box {
+                padding: 22px 18px;
+            }
+
             h1 {
-                font-size: 1.75rem;
+                font-size: 1.55rem;
+                line-height: 1.25;
+            }
+
+            h2 {
+                font-size: 1.15rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            p, ul, li {
+                font-size: 0.95rem;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            .nav-content {
+                height: auto;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                gap: 10px;
+            }
+
+            .back-link {
+                font-size: 0.85rem;
+            }
+
+            .contact-highlight {
+                padding: 16px 18px;
+            }
+
+            .contact-highlight a,
+            .lang-note a {
+                word-break: break-word;
             }
         }
 
