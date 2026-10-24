@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pekcan Software | Mobil Uygulama ve Yazılım Geliştirme</title>
-    <meta name="description" content="Pekcan Software - hesap gerektirmeyen, reklamsız ve çoğunlukla çevrimdışı çalışan Android uygulamaları geliştiren bağımsız bir yazılım girişimi.">
+    <title>Pekcan Software | Mobile Apps &amp; Software Development</title>
+    <meta name="description" content="Pekcan Software - an independent studio building Android apps that need no account, show no ads and mostly work offline.">
     <meta name="theme-color" content="#0b0f19">
     <link rel="canonical" href="https://pekcansoftware.com/">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Ctext x='32' y='45' font-family='Segoe UI,Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Pekcan Software">
-    <meta property="og:description" content="Google Play için kullanıcı odaklı, gizliliğe saygılı mobil uygulamalar geliştiren bağımsız bir yazılım girişimi.">
+    <meta property="og:description" content="An independent studio building user-focused, privacy-respecting mobile apps for Google Play.">
     <meta property="og:url" content="https://pekcansoftware.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -643,6 +643,30 @@
         html {
             scroll-behavior: smooth;
         }
+    
+        /* ---- Dil degistirme ---- */
+        html[data-lang="en"] .t-tr { display: none !important; }
+        html[data-lang="tr"] .t-en { display: none !important; }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border, rgba(255,255,255,0.14));
+            color: inherit;
+            font: inherit;
+            font-weight: 600;
+            padding: 0.5rem 0.85rem;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .lang-btn:hover,
+        .lang-btn:focus-visible {
+            background: rgba(129, 140, 248, 0.14);
+            border-color: #818cf8;
+        }
     </style>
 </head>
 <body>
@@ -657,11 +681,20 @@
                 <span>Pekcan Software</span>
             </a>
             <div class="nav-links">
-                <a href="#about">Hakkımızda</a>
-                <a href="#apps">Uygulamalar</a>
-                <a href="privacy.html">Gizlilik</a>
-                <a href="terms.html">Kullanım Şartları</a>
-                <a href="#contact" class="nav-btn">İletişim</a>
+                <a href="#about" class="t-en">About</a>
+                <a href="#about" class="t-tr">Hakkımızda</a>
+                <a href="#apps" class="t-en">Apps</a>
+                <a href="#apps" class="t-tr">Uygulamalar</a>
+                <a href="privacy.html" class="t-en">Privacy</a>
+                <a href="privacy.html" class="t-tr">Gizlilik</a>
+                <a href="terms.html" class="t-en">Terms</a>
+                <a href="terms.html" class="t-tr">Kullanım Şartları</a>
+                <a href="#contact" class="nav-btn t-en">Contact</a>
+                <a href="#contact" class="nav-btn t-tr">İletişim</a>
+                <button type="button" id="langBtn" class="lang-btn"
+                        aria-label="Change language / Dili değiştir">
+                    <span aria-hidden="true">🌐</span><span id="langBtnText">Türkçe</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -669,14 +702,21 @@
     <!-- Hero Bölümü -->
     <section class="hero">
         <div class="container">
-            <div class="tagline-pill">
+            <div class="tagline-pill t-en">
+                <span>⚡</span> Android &amp; Mobile Solutions
+            </div>
+            <div class="tagline-pill t-tr">
                 <span>⚡</span> Android &amp; Mobil Çözümler
             </div>
-            <h1>Günlük Hayatı<br><span>Kolaylaştıran Uygulamalar</span></h1>
-            <p>Pekcan Software, tek bir işi iyi yapmaya odaklanan küçük Android uygulamaları geliştiren bağımsız bir yazılım girişimidir. Her uygulamanın hangi veriyi nasıl kullandığını gizlilik politikamızda açıkça yazar, değiştiğinde güncelleriz.</p>
+            <h1 class="t-en">Apps That Make<br><span>Everyday Life Easier</span></h1>
+            <h1 class="t-tr">Günlük Hayatı<br><span>Kolaylaştıran Uygulamalar</span></h1>
+            <p class="t-en">Pekcan Software is an independent software studio building small Android apps, each focused on doing one thing well. Our privacy policy states, app by app, exactly what data each one uses, and we update it whenever that changes.</p>
+            <p class="t-tr">Pekcan Software, tek bir işi iyi yapmaya odaklanan küçük Android uygulamaları geliştiren bağımsız bir yazılım girişimidir. Her uygulamanın hangi veriyi nasıl kullandığını gizlilik politikamızda açıkça yazar, değiştiğinde güncelleriz.</p>
             <div class="hero-actions">
-                <a href="#apps" class="btn-primary">Projeleri İncele</a>
-                <a href="privacy.html" class="btn-secondary">Gizlilik &amp; Güvenlik</a>
+                <a href="#apps" class="btn-primary t-en">Explore Projects</a>
+                <a href="#apps" class="btn-primary t-tr">Projeleri İncele</a>
+                <a href="privacy.html" class="btn-secondary t-en">Privacy &amp; Security</a>
+                <a href="privacy.html" class="btn-secondary t-tr">Gizlilik &amp; Güvenlik</a>
             </div>
         </div>
     </section>
@@ -687,18 +727,24 @@
             <div class="grid">
                 <div class="card">
                     <div class="card-icon">🎯</div>
-                    <h3>Sade ve Odaklı</h3>
-                    <p>Her uygulama tek bir işi iyi yapmak için tasarlanır. Gereksiz özellik yığmak yerine, açtığınızda ne yapacağını hemen anladığınız arayüzler kurmayı tercih ediyoruz.</p>
+                    <h3 class="t-en">Simple and Focused</h3>
+                    <h3 class="t-tr">Sade ve Odaklı</h3>
+                    <p class="t-en">Each app is designed to do one thing well. Instead of piling on features, we build screens where you can tell what to do the moment you open them.</p>
+                    <p class="t-tr">Her uygulama tek bir işi iyi yapmak için tasarlanır. Gereksiz özellik yığmak yerine, açtığınızda ne yapacağını hemen anladığınız arayüzler kurmayı tercih ediyoruz.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">📖</div>
-                    <h3>Açık Anlatım</h3>
-                    <p>Hangi uygulamanın hangi veriye dokunduğunu gizlilik politikamızda uygulama uygulama yazıyoruz. Bir uygulamanın veri kullanımı değişirse, yayınlanmadan önce burayı güncelliyoruz.</p>
+                    <h3 class="t-en">Plain Language</h3>
+                    <h3 class="t-tr">Açık Anlatım</h3>
+                    <p class="t-en">Our privacy policy lists, app by app, which data each one touches. If an app's data use changes, we update that page before the release goes out.</p>
+                    <p class="t-tr">Hangi uygulamanın hangi veriye dokunduğunu gizlilik politikamızda uygulama uygulama yazıyoruz. Bir uygulamanın veri kullanımı değişirse, yayınlanmadan önce burayı güncelliyoruz.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">🌍</div>
-                    <h3>Genişleyen Dil Desteği</h3>
-                    <p>Uygulamalarımızı tek dille sınırlamıyoruz. İngilizce başta olmak üzere yeni dilleri kademeli olarak ekliyor, sağdan sola yazılan dilleri de gözetiyoruz.</p>
+                    <h3 class="t-en">Growing Language Support</h3>
+                    <h3 class="t-tr">Genişleyen Dil Desteği</h3>
+                    <p class="t-en">We do not limit our apps to a single language. English comes first, other languages are added step by step, and right-to-left scripts are taken into account.</p>
+                    <p class="t-tr">Uygulamalarımızı tek dille sınırlamıyoruz. İngilizce başta olmak üzere yeni dilleri kademeli olarak ekliyor, sağdan sola yazılan dilleri de gözetiyoruz.</p>
                 </div>
             </div>
         </div>
@@ -708,97 +754,117 @@
     <section class="showcase" id="apps">
         <div class="container">
             <div class="section-header">
-                <h2>Uygulamalarımız &amp; Projeler</h2>
-                <p>Geliştirme sürecindeki projelerimiz. Henüz Google Play Store'da yayında olan bir uygulamamız bulunmuyor; her biri testlerini tamamladıkça bu sayfada duyurulacaktır.</p>
+                <h2 class="t-en">Our Apps &amp; Projects</h2>
+                <h2 class="t-tr">Uygulamalarımız &amp; Projeler</h2>
+                <p class="t-en">Projects currently in development. None of our apps are published on Google Play yet; each one will be announced on this page as it finishes testing.</p>
+                <p class="t-tr">Geliştirme sürecindeki projelerimiz. Henüz Google Play Store'da yayında olan bir uygulamamız bulunmuyor; her biri testlerini tamamladıkça bu sayfada duyurulacaktır.</p>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">🎲</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>Napsak?</h4>
-                    <p>Çiftler ve arkadaşlar için karar verme uygulaması. "Bugün ne yapsak, nereye gitsek, ne izlesek?" tartışmasını bitirir: iki taraf da kart destesindeki seçenekleri kendi telefonunda işaretler, ortak beğeni çıktığında eşleşme oluşur. Uzak Mesafe odası sayesinde farklı şehirlerdeki iki kişi de bir oda koduyla aynı anda karar verebilir.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">Up to Us</h4>
+                    <h4 class="t-tr">Napsak?</h4>
+                    <p class="t-en">A decision-making app for couples and friends. It settles the &ldquo;what should we do, where should we go, what should we watch?&rdquo; argument: both sides mark the options in a card deck on their own phone, and a match appears when you both like the same one. A Long Distance room lets two people in different cities decide together with a single room code.</p>
+                    <p class="t-tr">Çiftler ve arkadaşlar için karar verme uygulaması. &ldquo;Bugün ne yapsak, nereye gitsek, ne izlesek?&rdquo; tartışmasını bitirir: iki taraf da kart destesindeki seçenekleri kendi telefonunda işaretler, ortak beğeni çıktığında eşleşme oluşur. Uzak Mesafe odası sayesinde farklı şehirlerdeki iki kişi de bir oda koduyla aynı anda karar verebilir.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">🔑</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>Nereye Koydum?</h4>
-                    <p>"Yedek anahtarı nereye kaldırmıştım?" sorusunu bitiren kişisel ev hafızası. Eşyaları kaldırdığınız yerle birlikte kaydeder, aradığınızda saniyeler içinde bulmanızı sağlar. Ödünç verdiğiniz eşyaları kimde olduğuyla birlikte ayrı bir listede takip eder.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">StashSpot</h4>
+                    <h4 class="t-tr">Nereye Koydum?</h4>
+                    <p class="t-en">A personal memory for your home that ends the &ldquo;where did I put the spare key?&rdquo; question. It records each item together with the place you put it, so you can find it in seconds. Items you lend out are tracked in a separate list, along with who has them.</p>
+                    <p class="t-tr">&ldquo;Yedek anahtarı nereye kaldırmıştım?&rdquo; sorusunu bitiren kişisel ev hafızası. Eşyaları kaldırdığınız yerle birlikte kaydeder, aradığınızda saniyeler içinde bulmanızı sağlar. Ödünç verdiğiniz eşyaları kimde olduğuyla birlikte ayrı bir listede takip eder.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">📅</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>SonGün</h4>
-                    <p>Buzdolabınızdaki ve kilerinizdeki ürünlerin son kullanma tarihini takip eder; bozulmaya en yakın olanı listenin başına alır. Elinizde kalanlarla yapabileceğiniz kurtarma tarifleri önerir ve israfı önleyerek biriktirdiğiniz tutarı gösterir.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">Best Before</h4>
+                    <h4 class="t-tr">SonGün</h4>
+                    <p class="t-en">Keeps track of the expiry dates of what is in your fridge and pantry, moving whatever spoils first to the top of the list. It suggests rescue recipes for what you have left and shows how much you saved by not throwing food away.</p>
+                    <p class="t-tr">Buzdolabınızdaki ve kilerinizdeki ürünlerin son kullanma tarihini takip eder; bozulmaya en yakın olanı listenin başına alır. Elinizde kalanlarla yapabileceğiniz kurtarma tarifleri önerir ve israfı önleyerek biriktirdiğiniz tutarı gösterir.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">💸</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>Cebimdeki Delik</h4>
-                    <p>Unuttuğunuz abonelikleri ve fark etmeden biriken küçük düzenli harcamaları ortaya çıkaran sızıntı dedektifi. Aylık kaçağınızın yıllık karşılığını hesaplar, iptal ettiklerinizi "kapatılan delikler" olarak kaydeder. Banka hesabınıza bağlanmaz, kart bilgisi istemez — kayıtları siz girersiniz.</p>
-                </div>
-            </div>
-
-            <div class="app-card">
-                <div class="app-icon">🤝</div>
-                <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>YanKapı</h4>
-                    <p>Apartman ya da mahalle ölçeğinde ortak eşya defteri. Matkap, merdiven, kamp sandalyesi gibi yılda birkaç kez kullanılan eşyaların kimde olduğunu kaydeder; satın almak yerine ödünç alarak biriken tasarrufu gösterir. Kayıtları komşularınızla birlikte siz oluşturursunuz.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">PocketLeak</h4>
+                    <h4 class="t-tr">Cebimdeki Delik</h4>
+                    <p class="t-en">A leak detector for forgotten subscriptions and the small recurring charges that pile up unnoticed. It works out what your monthly leak costs per year and records what you cancelled as &ldquo;plugged holes&rdquo;. It does not connect to your bank and never asks for card details — you enter the records yourself.</p>
+                    <p class="t-tr">Unuttuğunuz abonelikleri ve fark etmeden biriken küçük düzenli harcamaları ortaya çıkaran sızıntı dedektifi. Aylık kaçağınızın yıllık karşılığını hesaplar, iptal ettiklerinizi &ldquo;kapatılan delikler&rdquo; olarak kaydeder. Banka hesabınıza bağlanmaz, kart bilgisi istemez — kayıtları siz girersiniz.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">💊</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>Şifa Takip</h4>
-                    <p>Aile ilaç saati hatırlatıcısı. Anne, baba, eş ya da çocuk için ayrı ilaç kaydı tutar ve her doz saatinde bildirim gönderir. "Aldım" işareti her gece kendiliğinden sıfırlanır; kutu stoğu azalınca uyarır. Sağlık bilgileri hassas olduğu için kayıtların nasıl saklandığını <a href="privacy.html" style="color:#818cf8;">gizlilik politikamızda</a> ayrıntılı yazdık.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">DoseMate</h4>
+                    <h4 class="t-tr">Şifa Takip</h4>
+                    <p class="t-en">A medication reminder for the whole family. It keeps a separate record for a parent, a partner or a child and sends a notification at each dose time. The &ldquo;taken&rdquo; marks reset on their own every night, and it warns you when a box is running low. Because health data is sensitive, we describe exactly how these records are stored in our <a href="privacy.html" style="color:#818cf8;">privacy policy</a>.</p>
+                    <p class="t-tr">Aile ilaç saati hatırlatıcısı. Anne, baba, eş ya da çocuk için ayrı ilaç kaydı tutar ve her doz saatinde bildirim gönderir. &ldquo;Aldım&rdquo; işareti her gece kendiliğinden sıfırlanır; kutu stoğu azalınca uyarır. Sağlık bilgileri hassas olduğu için kayıtların nasıl saklandığını <a href="privacy.html" style="color:#818cf8;">gizlilik politikamızda</a> ayrıntılı yazdık.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">🆘</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>Acil Durum Kasası</h4>
-                    <p>Acil bir anda lazım olacak bilgileri tek ekranda toplar: kan grubu, alerjiler, kullanılan ilaçlar ve aranacak kişiler. Yanında adım adım ilk yardım rehberi ve enkaz altında ya da karanlıkta duyulmayı kolaylaştıran düdük ekranı bulunur. Profesyonel tıbbi yardımın yerine geçmez — acil durumda önce 112.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">Emergency Card</h4>
+                    <h4 class="t-tr">Acil Durum Kasası</h4>
+                    <p class="t-en">Gathers what is needed in an emergency onto a single screen: blood type, allergies, current medication and who to call. It also includes a step-by-step first aid guide and a whistle screen that helps you be heard under rubble or in the dark. It is not a substitute for professional medical help — in an emergency, call the emergency services first.</p>
+                    <p class="t-tr">Acil bir anda lazım olacak bilgileri tek ekranda toplar: kan grubu, alerjiler, kullanılan ilaçlar ve aranacak kişiler. Yanında adım adım ilk yardım rehberi ve enkaz altında ya da karanlıkta duyulmayı kolaylaştıran düdük ekranı bulunur. Profesyonel tıbbi yardımın yerine geçmez — acil durumda önce 112.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">🌬️</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>İçini Dök</h4>
-                    <p>Yoğun bir an geçirdiğinizde içinizi dökebileceğiniz sade bir alan ve eşlik eden nefes egzersizi. Yazdıklarınızın nasıl saklandığını <a href="privacy.html" style="color:#818cf8;">gizlilik politikamızda</a> açıkladık. Uygulama tıbbi tedavi veya terapi yerine geçmez; zor bir dönemden geçiyorsanız bir uzmana başvurmanızı öneririz.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">Let It Out</h4>
+                    <h4 class="t-tr">İçini Dök</h4>
+                    <p class="t-en">A plain space to write out whatever is weighing on you after a difficult moment, with a breathing exercise alongside it. How what you write is stored is explained in our <a href="privacy.html" style="color:#818cf8;">privacy policy</a>. The app is not a substitute for medical treatment or therapy; if you are going through a hard time, we encourage you to speak to a professional.</p>
+                    <p class="t-tr">Yoğun bir an geçirdiğinizde içinizi dökebileceğiniz sade bir alan ve eşlik eden nefes egzersizi. Yazdıklarınızın nasıl saklandığını <a href="privacy.html" style="color:#818cf8;">gizlilik politikamızda</a> açıkladık. Uygulama tıbbi tedavi veya terapi yerine geçmez; zor bir dönemden geçiyorsanız bir uzmana başvurmanızı öneririz.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">🧘</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>Sessiz Kafa</h4>
-                    <p>Dikkat dağılmadan çalışmak isteyenler için sade bir odaklanma sayacı. Çalışma ve mola aralıklarını takip eder, molalarda kısa alıntılar gösterir. Bildirim yağmuru yok, puan yok, rozet yok.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">Quiet Mind</h4>
+                    <h4 class="t-tr">Sessiz Kafa</h4>
+                    <p class="t-en">A plain focus timer for people who want to work without being pulled away. It tracks work and break intervals and shows a short quote during breaks. No notification storms, no points, no badges.</p>
+                    <p class="t-tr">Dikkat dağılmadan çalışmak isteyenler için sade bir odaklanma sayacı. Çalışma ve mola aralıklarını takip eder, molalarda kısa alıntılar gösterir. Bildirim yağmuru yok, puan yok, rozet yok.</p>
                 </div>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">📄</div>
                 <div class="app-info">
-                    <span class="badge-soon">Geliştirme Aşamasında</span>
-                    <h4>Kolayca Anlat</h4>
-                    <p>Resmi yazılarda ve tıbbi raporlarda karşınıza çıkan terimleri sade Türkçeyle açıklayan bilgi kartları. Çevrimdışı çalışan bir terim sözlüğüdür; hukuki ya da tıbbi tavsiye vermez, belgenizi yorumlamaz.</p>
+                    <span class="badge-soon t-en">In Development</span>
+                    <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                    <h4 class="t-en">Kolayca Anlat</h4>
+                    <h4 class="t-tr">Kolayca Anlat</h4>
+                    <p class="t-en">Information cards that explain, in plain Turkish, the terms that turn up in official letters and medical reports. It is an offline glossary covering Turkish documents and institutions, so it is published in Turkish only. It gives no legal or medical advice and does not interpret your document.</p>
+                    <p class="t-tr">Resmi yazılarda ve tıbbi raporlarda karşınıza çıkan terimleri sade Türkçeyle açıklayan bilgi kartları. Çevrimdışı çalışan bir terim sözlüğüdür; hukuki ya da tıbbi tavsiye vermez, belgenizi yorumlamaz.</p>
                 </div>
             </div>
         </div>
@@ -809,16 +875,22 @@
         <div class="container">
             <div class="trust-grid">
                 <div class="trust-item">
-                    <h4>🔍 Şeffaf veri kullanımı</h4>
-                    <p>Hangi uygulamanın hangi veriye dokunduğunu tek tek listeledik. Ayrıntılar <a href="privacy.html" style="color:#818cf8;">gizlilik politikamızda</a>.</p>
+                    <h4 class="t-en">🔍 Transparent data use</h4>
+                    <h4 class="t-tr">🔍 Şeffaf veri kullanımı</h4>
+                    <p class="t-en">We list which data each app touches, one by one. The details are in our <a href="privacy.html" style="color:#818cf8;">privacy policy</a>.</p>
+                    <p class="t-tr">Hangi uygulamanın hangi veriye dokunduğunu tek tek listeledik. Ayrıntılar <a href="privacy.html" style="color:#818cf8;">gizlilik politikamızda</a>.</p>
                 </div>
                 <div class="trust-item">
-                    <h4>🗑️ Veri silme hakkı</h4>
-                    <p>Verilerinizin silinmesini istediğinizde tek bir e-posta yeterli. Talepler en geç 30 gün içinde sonuçlandırılır.</p>
+                    <h4 class="t-en">🗑️ The right to have your data deleted</h4>
+                    <h4 class="t-tr">🗑️ Veri silme hakkı</h4>
+                    <p class="t-en">One e-mail is enough when you want your data deleted. Requests are completed within 30 days at the latest.</p>
+                    <p class="t-tr">Verilerinizin silinmesini istediğinizde tek bir e-posta yeterli. Talepler en geç 30 gün içinde sonuçlandırılır.</p>
                 </div>
                 <div class="trust-item">
-                    <h4>✉️ Gerçek bir destek adresi</h4>
-                    <p>Yazdığınız e-postayı geliştiricinin kendisi okur. Yanıt süremiz genellikle 3 iş günüdür.</p>
+                    <h4 class="t-en">✉️ A real support address</h4>
+                    <h4 class="t-tr">✉️ Gerçek bir destek adresi</h4>
+                    <p class="t-en">The developer reads your e-mail personally. We usually reply within 3 business days.</p>
+                    <p class="t-tr">Yazdığınız e-postayı geliştiricinin kendisi okur. Yanıt süremiz genellikle 3 iş günüdür.</p>
                 </div>
             </div>
         </div>
@@ -828,12 +900,17 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-box">
-                <h2>Bize Ulaşın</h2>
-                <p>Uygulama önerileri, hata bildirimleri, gizlilik soruları veya veri silme talepleriniz için doğrudan yazabilirsiniz. Yanıt süremiz genellikle 3 iş günüdür.</p>
+                <h2 class="t-en">Get in Touch</h2>
+                <h2 class="t-tr">Bize Ulaşın</h2>
+                <p class="t-en">Write to us directly with app suggestions, bug reports, privacy questions or data deletion requests. We usually reply within 3 business days.</p>
+                <p class="t-tr">Uygulama önerileri, hata bildirimleri, gizlilik soruları veya veri silme talepleriniz için doğrudan yazabilirsiniz. Yanıt süremiz genellikle 3 iş günüdür.</p>
                 <a href="mailto:support.pekcansoftware@gmail.com" class="contact-email">support.pekcansoftware@gmail.com</a>
 
-                <div class="en-block">
-                    <strong>English —</strong> Pekcan Software is an independent mobile software developer based in Türkiye. Our privacy policy states, application by application, exactly what data each app uses, and we update it before releasing any change. For support, privacy questions or data deletion requests, write to <a href="mailto:support.pekcansoftware@gmail.com" style="color:#818cf8;">support.pekcansoftware@gmail.com</a> — we reply within 3 business days. Our <a href="privacy.html" style="color:#818cf8;">Privacy Policy</a> and <a href="terms.html" style="color:#818cf8;">Terms of Service</a> are available in both Turkish and English.
+                <div class="en-block t-en">
+                    Pekcan Software is an independent mobile software developer based in Türkiye. Our <a href="privacy.html" style="color:#818cf8;">Privacy Policy</a> and <a href="terms.html" style="color:#818cf8;">Terms of Service</a> are available in both English and Turkish.
+                </div>
+                <div class="en-block t-tr">
+                    Pekcan Software, Türkiye merkezli bağımsız bir mobil yazılım geliştiricisidir. <a href="privacy.html" style="color:#818cf8;">Gizlilik Politikası</a> ve <a href="terms.html" style="color:#818cf8;">Kullanım Şartları</a> metinleri hem Türkçe hem İngilizce olarak yayımlanmıştır.
                 </div>
             </div>
         </div>
@@ -842,18 +919,69 @@
     <!-- Alt Bilgi -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Pekcan Software &mdash; bağımsız mobil yazılım geliştiricisi, Türkiye. Tüm hakları saklıdır.</p>
+            <p class="t-en">&copy; 2026 Pekcan Software &mdash; independent mobile software developer, Türkiye. All rights reserved.</p>
+            <p class="t-tr">&copy; 2026 Pekcan Software &mdash; bağımsız mobil yazılım geliştiricisi, Türkiye. Tüm hakları saklıdır.</p>
             <div class="footer-links">
-                <a href="index.html">Ana Sayfa</a>
+                <a href="index.html" class="t-en">Home</a>
+                <a href="index.html" class="t-tr">Ana Sayfa</a>
                 <span>&bull;</span>
-                <a href="privacy.html">Gizlilik Politikası (Privacy Policy)</a>
+                <a href="privacy.html" class="t-en">Privacy Policy</a>
+                <a href="privacy.html" class="t-tr">Gizlilik Politikası</a>
                 <span>&bull;</span>
-                <a href="terms.html">Kullanım Şartları (Terms of Service)</a>
+                <a href="terms.html" class="t-en">Terms of Service</a>
+                <a href="terms.html" class="t-tr">Kullanım Şartları</a>
                 <span>&bull;</span>
-                <a href="mailto:support.pekcansoftware@gmail.com">Destek</a>
+                <a href="mailto:support.pekcansoftware@gmail.com" class="t-en">Support</a>
+                <a href="mailto:support.pekcansoftware@gmail.com" class="t-tr">Destek</a>
             </div>
         </div>
     </footer>
+
+    <script>
+    // Dil secimi. Sayfa Ingilizce yaziliydigi icin JS calismasa da
+    // dogru goruntuleniyor; burasi yalnizca Turkceye gecisi saglar.
+    (function () {
+        var ANAHTAR = 'ps_dil';
+        var kok = document.documentElement;
+        var dugme = document.getElementById('langBtn');
+        var dugmeYazi = document.getElementById('langBtnText');
+        var basliklar = { en: 'Pekcan Software | Mobile Apps & Software Development',
+                          tr: 'Pekcan Software | Mobil Uygulama ve Yazılım Geliştirme' };
+
+        function uygula(dil) {
+            kok.setAttribute('data-lang', dil);
+            kok.setAttribute('lang', dil);
+            document.title = basliklar[dil];
+            // Dugme her zaman GECILECEK dili yazar.
+            dugmeYazi.textContent = dil === 'en' ? 'Türkçe' : 'English';
+            dugme.setAttribute('lang', dil === 'en' ? 'tr' : 'en');
+        }
+
+        // Ziyaretcinin dili. Siralama: (1) daha once yaptigi secim,
+        // (2) tarayici dili, (3) Ingilizce. Su an tr ve en var; yeni dil
+        // eklenince yalnizca DILLER dizisine yazmak yetiyor.
+        var DILLER = ['en', 'tr'];
+
+        function tarayiciDili() {
+            var liste = navigator.languages || [navigator.language || 'en'];
+            for (var i = 0; i < liste.length; i++) {
+                var kisa = String(liste[i]).toLowerCase().split('-')[0];
+                if (DILLER.indexOf(kisa) >= 0) { return kisa; }
+            }
+            return 'en';
+        }
+
+        var secili = null;
+        try { secili = localStorage.getItem(ANAHTAR); } catch (e) { /* gizli sekme */ }
+        uygula(DILLER.indexOf(secili) >= 0 ? secili : tarayiciDili());
+
+        dugme.addEventListener('click', function () {
+            var yeni = kok.getAttribute('data-lang') === 'en' ? 'tr' : 'en';
+            uygula(yeni);
+            try { localStorage.setItem(ANAHTAR, yeni); } catch (e) { /* yazilamadi */ }
+        });
+    })();
+    </script>
 
 </body>
 </html>
