@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kullanım Şartları (Terms of Service) | Pekcan Software</title>
-    <meta name="description" content="Pekcan Software mobil uygulamaları için Kullanım Şartları. Türkçe ve İngilizce.">
+    <title>Terms of Service | Pekcan Software</title>
+    <meta name="description" content="Terms of Service for Pekcan Software mobile apps. Available in English and Turkish.">
     <meta name="theme-color" content="#0b0f19">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Ctext x='32' y='45' font-family='Segoe UI,Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -267,6 +267,39 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* ---- Dil degistirme ---- */
+        html[data-lang="en"] .t-tr { display: none !important; }
+        html[data-lang="tr"] .t-en { display: none !important; }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: var(--text-secondary);
+            font: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.45rem 0.8rem;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .lang-btn:hover,
+        .lang-btn:focus-visible {
+            background: rgba(129, 140, 248, 0.14);
+            border-color: #818cf8;
+            color: var(--text-primary);
+        }
     </style>
 </head>
 <body>
@@ -277,18 +310,22 @@
             <div class="logo-badge">P</div>
             <span>Pekcan Software</span>
         </a>
-        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+        <div class="nav-right">
+            <a href="index.html" class="back-link t-en">← Back to home</a>
+            <a href="index.html" class="back-link t-tr">← Ana Sayfaya Dön</a>
+            <button type="button" id="langBtn" class="lang-btn"
+                    aria-label="Change language / Dili değiştir">
+                <span aria-hidden="true">🌐</span><span id="langBtnText">Türkçe</span>
+            </button>
+        </div>
     </div>
 </nav>
 
 <div class="content-container">
     <div class="privacy-box">
-        <h1>Kullanım Şartları (Terms of Service)</h1>
-        <div class="meta-date">Son Güncelleme: 5 Eylül 2026</div>
-
-        <div class="lang-note">
-            🇬🇧 <strong>English version below.</strong> The complete English text of these Terms is available in the <a href="#english" style="color:#818cf8;">English section</a> at the bottom of this page.
-        </div>
+        <div class="t-tr">
+        <h1>Kullanım Şartları</h1>
+        <div class="meta-date">Son Güncelleme: 25 Ekim 2026</div>
 
         <h2>1. Kabul</h2>
         <p>Pekcan Software tarafından geliştirilen bir uygulamayı indirip kullanarak bu Kullanım Şartları'nı kabul etmiş olursunuz. Şartları kabul etmiyorsanız lütfen uygulamayı kullanmayın ve cihazınızdan kaldırın.</p>
@@ -339,13 +376,18 @@
             <p><strong>Web sitesi:</strong> <a href="https://pekcansoftware.com/" style="color:#818cf8; text-decoration:none;">pekcansoftware.com</a></p>
         </div>
 
-        <div class="lang-divider" id="english">
-            <h1>Terms of Service (English)</h1>
-            <div class="meta-date">Last updated: 5 September 2026</div>
+        </div>
+
+        <div class="t-en">
+        <div id="english">
+            <h1>Terms of Service</h1>
+            <div class="meta-date">Last updated: 25 October 2026</div>
         </div>
 
         <h2>1. Acceptance</h2>
         <p>By downloading and using an application developed by Pekcan Software, you accept these Terms of Service. If you do not accept them, please do not use the application and remove it from your device.</p>
+        <p style="opacity:0.75; font-size:0.92rem;">The app names used in this section are the working titles planned for the international release and may still change before publication. In Türkiye the same apps are published under their Turkish names, which you can see by switching this page to Turkish.</p>
+
 
         <h2>2. Description of the service</h2>
         <p>Our applications are personal-use utilities intended to make everyday life easier. They require no user account and most of them work without an internet connection. What data each application handles is described in detail in our <a href="privacy.html" style="color:#818cf8;">Privacy Policy</a>.</p>
@@ -354,14 +396,14 @@
         <p>We grant you a non-exclusive, non-transferable licence to use our applications for personal, non-commercial purposes. This licence does not include the right to copy and distribute, sell, rent, reverse engineer, or create derivative works from the applications.</p>
 
         <h2>4. Your obligations</h2>
-        <p>You agree not to use the applications in breach of applicable law, not to attempt to disrupt or overload the service or circumvent its security measures, and not to share unlawful, harmful or harassing content through the Remote Room feature of Napsak?.</p>
+        <p>You agree not to use the applications in breach of applicable law, not to attempt to disrupt or overload the service or circumvent its security measures, and not to share unlawful, harmful or harassing content through the Remote Room feature of Up to Us.</p>
 
         <h2>5. Important notice regarding health and finance related applications</h2>
-        <p><strong>Şifa Takip</strong> is a medication reminder. It is not a medical device: it does not diagnose, does not recommend treatment, and does not replace the instructions of your doctor or pharmacist. Always consult a healthcare professional about decisions concerning your medication. Reminders are displayed by your device's operating system, and a reminder may be delayed or may not appear at all if the phone is switched off, battery optimisation restrictions apply, or the notification permission is revoked. Do not rely on this application alone for life-critical medication.</p>
-        <p><strong>İçini Dök</strong> is a decompression tool. It does not replace counselling, therapy or medical treatment. If you are going through a mentally difficult period, we encourage you to consult a professional. In an emergency, please call your local emergency number (112 in Türkiye).</p>
-        <p><strong>Acil Durum Kasası</strong> is a first-aid reference and personal information store. It does not replace emergency medical services. In an emergency, call your local emergency number first; the first-aid guide in the application is for general information only.</p>
+        <p><strong>DoseMate</strong> is a medication reminder. It is not a medical device: it does not diagnose, does not recommend treatment, and does not replace the instructions of your doctor or pharmacist. Always consult a healthcare professional about decisions concerning your medication. Reminders are displayed by your device's operating system, and a reminder may be delayed or may not appear at all if the phone is switched off, battery optimisation restrictions apply, or the notification permission is revoked. Do not rely on this application alone for life-critical medication.</p>
+        <p><strong>Let It Out</strong> is a decompression tool. It does not replace counselling, therapy or medical treatment. If you are going through a mentally difficult period, we encourage you to consult a professional. In an emergency, please call your local emergency number (112 in Türkiye).</p>
+        <p><strong>Emergency Card</strong> is a first-aid reference and personal information store. It does not replace emergency medical services. In an emergency, call your local emergency number first; the first-aid guide in the application is for general information only.</p>
         <p><strong>Kolayca Anlat</strong> is a glossary. It provides no legal or medical advice, does not interpret your documents, and does not replace the opinion of a lawyer or a physician.</p>
-        <p><strong>Cebimdeki Delik</strong> is a budgeting tool that calculates using the records you enter yourself. It provides no investment advice, financial advice or accounting service; the figures it produces are informational only.</p>
+        <p><strong>PocketLeak</strong> is a budgeting tool that calculates using the records you enter yourself. It provides no investment advice, financial advice or accounting service; the figures it produces are informational only.</p>
 
         <h2>6. Intellectual property</h2>
         <p>The source code, interface design, texts, logos and imagery of the applications belong to Pekcan Software and are protected by copyright law. Content you create inside an application (notes, records, lists) belongs to you; that content is stored on your device only and we have no access to it.</p>
@@ -388,12 +430,54 @@
             <p><strong>Website:</strong> <a href="https://pekcansoftware.com/" style="color:#818cf8; text-decoration:none;">pekcansoftware.com</a></p>
         </div>
 
+        </div>
     </div>
 
     <div class="footer-note">
-        <p>&copy; 2026 Pekcan Software &mdash; <a href="index.html" style="color:#818cf8;">Ana Sayfa</a> &bull; <a href="privacy.html" style="color:#818cf8;">Gizlilik Politikası</a></p>
+        <p class="t-en">&copy; 2026 Pekcan Software &mdash; <a href="index.html" style="color:#818cf8;">Home</a> &bull; <a href="privacy.html" style="color:#818cf8;">Privacy Policy</a></p>
+        <p class="t-tr">&copy; 2026 Pekcan Software &mdash; <a href="index.html" style="color:#818cf8;">Ana Sayfa</a> &bull; <a href="privacy.html" style="color:#818cf8;">Gizlilik Politikası</a></p>
     </div>
 </div>
 
+<script>
+// Dil secimi: ana sayfadaki ile ayni anahtari kullanir, boylece
+// kullanicinin secimi sayfalar arasinda tasinir.
+(function () {
+    var ANAHTAR = 'ps_dil';
+    var DILLER = ['en', 'tr'];
+    var kok = document.documentElement;
+    var dugme = document.getElementById('langBtn');
+    var dugmeYazi = document.getElementById('langBtnText');
+    var basliklar = { en: 'Terms of Service | Pekcan Software', tr: 'Kullanım Şartları | Pekcan Software' };
+
+    function uygula(dil) {
+        kok.setAttribute('data-lang', dil);
+        kok.setAttribute('lang', dil);
+        document.title = basliklar[dil];
+        dugmeYazi.textContent = dil === 'en' ? 'Türkçe' : 'English';
+    }
+
+    function tarayiciDili() {
+        var liste = navigator.languages || [navigator.language || 'en'];
+        for (var i = 0; i < liste.length; i++) {
+            var kisa = String(liste[i]).toLowerCase().split('-')[0];
+            if (DILLER.indexOf(kisa) >= 0) { return kisa; }
+        }
+        return 'en';
+    }
+
+    var secili = null;
+    try { secili = localStorage.getItem(ANAHTAR); } catch (e) { /* gizli sekme */ }
+    uygula(DILLER.indexOf(secili) >= 0 ? secili : tarayiciDili());
+
+    dugme.addEventListener('click', function () {
+        var yeni = kok.getAttribute('data-lang') === 'en' ? 'tr' : 'en';
+        uygula(yeni);
+        try { localStorage.setItem(ANAHTAR, yeni); } catch (e) { /* yazilamadi */ }
+    });
+})();
+</script>
+
 </body>
+
 </html>
