@@ -885,6 +885,30 @@
             white-space: nowrap;
         }
 
+        /* Google Play'de yayinda olan uygulama rozeti (2026-11-14) */
+        .badge-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(34, 197, 94, 0.14);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            color: #86efac;
+            padding: 5px 12px;
+            border-radius: 99px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .badge-live:hover {
+            background: rgba(34, 197, 94, 0.24);
+            border-color: rgba(34, 197, 94, 0.7);
+        }
+
         .app-info p {
             color: var(--text-secondary);
             font-size: 0.96rem;
@@ -1249,9 +1273,9 @@
 
                     <div class="hero-telemetry">
                         <div class="telemetry-item">
-                            <div class="telemetry-val">10 <span>APPS</span></div>
-                            <div class="telemetry-lbl t-en">In Active Pipeline</div>
-                            <div class="telemetry-lbl t-tr">Geliştirme Sürecinde</div>
+                            <div class="telemetry-val">8 <span>APPS</span></div>
+                            <div class="telemetry-lbl t-en">1 on Google Play, 7 in development</div>
+                            <div class="telemetry-lbl t-tr">1'i Google Play'de, 7'si geliştirmede</div>
                         </div>
                         <div class="telemetry-item">
                             <div class="telemetry-val">0 <span>ADS</span></div>
@@ -1259,7 +1283,7 @@
                             <div class="telemetry-lbl t-tr">Reklam &amp; İzleyici Yok</div>
                         </div>
                         <div class="telemetry-item">
-                            <div class="telemetry-val">8/10 <span>LOCAL</span></div>
+                            <div class="telemetry-val">7/8 <span>LOCAL</span></div>
                             <div class="telemetry-lbl t-en">100% On-Device Data</div>
                             <div class="telemetry-lbl t-tr">Tamamen Cihaz İçi</div>
                         </div>
@@ -1310,8 +1334,8 @@
                                         <div class="t-tr">Hesap Zorunluluğu</div>
                                     </div>
                                 </div>
-                                <span class="console-pill pill-emerald t-en">NONE (9/10)</span>
-                                <span class="console-pill pill-emerald t-tr">YOK (9/10)</span>
+                                <span class="console-pill pill-emerald t-en">NONE (8/8)</span>
+                                <span class="console-pill pill-emerald t-tr">YOK (8/8)</span>
                             </div>
 
                             <div class="console-row">
@@ -1403,8 +1427,8 @@
                 <span class="section-eyebrow t-tr">// 02 · ÜRÜN VİTRİNİ</span>
                 <h2 class="t-en">Our Apps &amp; Projects</h2>
                 <h2 class="t-tr">Uygulamalarımız &amp; Projeler</h2>
-                <p class="t-en">Projects currently in development. None of our apps are published on Google Play yet; each one will be announced on this page as it finishes testing. The English names below are working titles and may still change before release; in Türkiye the same apps are published under their Turkish names.</p>
-                <p class="t-tr">Geliştirme sürecindeki projelerimiz. Henüz Google Play Store'da yayında olan bir uygulamamız bulunmuyor; her biri testlerini tamamladıkça bu sayfada duyurulacaktır.</p>
+                <p class="t-en">Our apps and projects. Pikki is available on Google Play; the others are still in development and will be announced on this page as each one finishes testing. The English names below are working titles and may still change before release; in Türkiye the same apps are published under their Turkish names.</p>
+                <p class="t-tr">Uygulamalarımız ve projelerimiz. Pikki Google Play'de yayında; diğerleri geliştirme aşamasında ve her biri testlerini tamamladıkça bu sayfada duyurulacaktır.</p>
             </div>
 
             <!-- Interactive Filter Bar -->
@@ -1447,8 +1471,8 @@
                             </div>
                         </div>
                         <div>
-                            <span class="badge-soon t-en">In Development</span>
-                            <span class="badge-soon t-tr">Geliştirme Aşamasında</span>
+                            <a class="badge-live t-en" href="https://play.google.com/store/apps/details?id=com.pekcansoftware.pikki&amp;hl=en" target="_blank" rel="noopener">Get it on Google Play</a>
+                            <a class="badge-live t-tr" href="https://play.google.com/store/apps/details?id=com.pekcansoftware.pikki&amp;hl=tr" target="_blank" rel="noopener">Google Play'de Yayında</a>
                         </div>
                     </div>
                     <div class="app-info">
