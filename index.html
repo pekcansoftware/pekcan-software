@@ -1039,6 +1039,61 @@
             transform: translateY(-2px);
         }
 
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin: 34px 0 6px;
+            text-align: left;
+        }
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 18px 20px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(99, 102, 241, 0.16);
+            border-color: rgba(129, 140, 248, 0.55);
+            transform: translateY(-2px);
+        }
+
+        .contact-card .cc-ico { font-size: 1.4rem; }
+        .contact-card strong { font-size: 1.02rem; }
+        .contact-card small { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5; }
+
+        .contact-social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 26px 0 22px;
+        }
+
+        .contact-social a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 99px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            transition: all 0.2s ease;
+        }
+
+        .contact-social a:hover { color: #ffffff; border-color: rgba(129, 140, 248, 0.6); }
+
+        @media (max-width: 620px) {
+            .contact-cards { grid-template-columns: 1fr; }
+        }
+
         .copy-btn {
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.14);
@@ -1713,11 +1768,50 @@
                     </button>
                 </div>
 
+                <div class="contact-cards">
+                    <a class="contact-card" href="mailto:support@pekcansoftware.com?subject=Destek%20%2F%20Support">
+                        <span class="cc-ico">🛠️</span>
+                        <strong class="t-en">Support &amp; bug reports</strong>
+                        <strong class="t-tr">Destek ve hata bildirimi</strong>
+                        <small class="t-en">Something not working? Tell us the app, your device and what happened.</small>
+                        <small class="t-tr">Bir şey çalışmıyor mu? Uygulamayı, cihazınızı ve ne olduğunu yazın.</small>
+                    </a>
+                    <a class="contact-card" href="mailto:support@pekcansoftware.com?subject=%C3%96neri%20%2F%20%C4%B0%C5%9F%20birli%C4%9Fi%20%2F%20Suggestion%20%2F%20Partnership">
+                        <span class="cc-ico">💡</span>
+                        <strong class="t-en">Suggestions &amp; partnerships</strong>
+                        <strong class="t-tr">Öneri ve iş birliği</strong>
+                        <small class="t-en">Feature ideas, collaborations and business enquiries.</small>
+                        <small class="t-tr">Özellik fikirleri, iş birlikleri ve kurumsal talepler.</small>
+                    </a>
+                    <a class="contact-card" href="mailto:support@pekcansoftware.com?subject=Gizlilik%20%2F%20KVKK%20%2F%20Privacy">
+                        <span class="cc-ico">🔒</span>
+                        <strong class="t-en">Privacy &amp; data requests</strong>
+                        <strong class="t-tr">Gizlilik ve KVKK talepleri</strong>
+                        <small class="t-en">Access, deletion and other data requests. We answer within 30 days.</small>
+                        <small class="t-tr">Erişim, silme ve diğer veri talepleri. 30 gün içinde yanıtlarız.</small>
+                    </a>
+                    <a class="contact-card" href="mailto:support@pekcansoftware.com?subject=Bas%C4%B1n%20%2F%20Press">
+                        <span class="cc-ico">📰</span>
+                        <strong class="t-en">Press &amp; media</strong>
+                        <strong class="t-tr">Basın ve medya</strong>
+                        <small class="t-en">Interviews and media enquiries. Logos and brand details are in the Press Kit (footer).</small>
+                        <small class="t-tr">Röportaj ve medya talepleri. Logo ve marka bilgileri Basın Kiti'nde (sayfa altı).</small>
+                    </a>
+                </div>
+
+                <div class="contact-social">
+                    <a href="https://www.instagram.com/pekcansoftware/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/@pekcansoftware" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/@pekcansoftware" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://x.com/pekcansoftware" target="_blank" rel="noopener">X</a>
+                    <a href="https://www.facebook.com/pekcansoftware" target="_blank" rel="noopener">Facebook</a>
+                </div>
+
                 <div class="en-block t-en">
-                    Pekcan Software is a software company based in Türkiye. Our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a> are available in both English and Turkish.
+                    Pekcan Software is a software company based in Türkiye. Developer contact details are also listed on each app's Google Play page. Our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a> are available in English and Turkish. We usually reply within 3 business days.
                 </div>
                 <div class="en-block t-tr">
-                    Pekcan Software, Türkiye merkezli bağımsız bir mobil yazılım geliştiricisidir. <a href="privacy.html">Gizlilik Politikası</a> ve <a href="terms.html">Kullanım Şartları</a> metinleri hem Türkçe hem İngilizce olarak yayımlanmıştır.
+                    Pekcan Software, Türkiye merkezli bir yazılım şirketidir. Geliştirici iletişim bilgilerine her uygulamanın Google Play sayfasından da ulaşabilirsiniz. <a href="privacy.html">Gizlilik Politikası</a> ve <a href="terms.html">Kullanım Şartları</a> Türkçe ve İngilizce yayımlanmıştır. Yanıt süremiz genellikle 3 iş günüdür.
                 </div>
             </div>
         </div>
